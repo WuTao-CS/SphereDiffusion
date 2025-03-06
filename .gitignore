@@ -145,7 +145,6 @@ dmypy.json
 # user
 checkpoints/
 canny_checkpoints/
-*.png
 datasets/
 clip-vit-large-patch14/
 *_log/
