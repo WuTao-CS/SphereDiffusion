@@ -1,0 +1,15 @@
+conda init
+source ~/.bashrc
+echo "conda activate env-novelai"
+conda activate env-novelai
+cd /group/30042/jerryxwli/code/ControlNet/
+
+python train.py --save-path 'perspect_resize_clip_mask_checkpoints_dcn3_constrastive_rotate_final_z_cq' \
+    --num-workers 10 \
+    --config-file 'models/cldm_v15_clip_new_resize_contrastive_dcn3_rotate_z.yaml' \
+    --pretrain 'models/control_sd15_ini_resize_zero_dcn3_constractive.ckpt' \
+    --resume 'ablation_checkpoints/clip_dcn/ControlNet-epoch=09-global_step=34429.0.ckpt' \
+    --bs 4 \
+    --rotate \
+    --x 0 \
+    --y 0

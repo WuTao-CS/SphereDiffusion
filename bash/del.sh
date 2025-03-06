@@ -1,0 +1,1 @@
+find ./finalexp_img_log/baseline_fov30_epoch20_image_log -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) -exec rm -f {} +
